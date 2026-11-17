@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FlowPaste — 轻量 macOS 剪贴板管理器</title>
+<style>
+:root{--bg:#0a0a0f;--card:rgba(255,255,255,.05);--border:rgba(255,255,255,.1);--text:#e8e8ed;--dim:#8e8e99;--blue:#5e8fff;--grad:linear-gradient(135deg,#5e8fff 0%,#a855f7 100%)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+.hero{text-align:center;padding:100px 20px 80px;position:relative}
+.hero::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(ellipse,rgba(94,143,255,.08) 0%,transparent 70%);pointer-events:none}
+.hero h1{font-size:3.2em;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.hero .tagline{font-size:1.25em;color:var(--dim);max-width:500px;margin:0 auto}
+.badges{margin-top:16px}
+.badge{display:inline-block;padding:3px 12px;border-radius:14px;font-size:.82em;font-weight:600;margin:4px}
+.b-free{background:rgba(59,185,80,.15);color:#3fb950}
+.b-mas{background:rgba(94,143,255,.15);color:var(--blue)}
+.b-lite{background:rgba(210,153,34,.15);color:#d29922}
+.app-store-btn{display:inline-block;margin-top:28px;padding:14px 36px;background:#1a1a2e;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);font-size:1.1em;font-weight:600;transition:border-color .2s,background .2s}
+.app-store-btn:hover{border-color:var(--blue);background:#1e1e35}
+.app-store-btn svg{vertical-align:-4px;margin-right:8px}
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;margin-top:20px}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 28px}
+.feat .icon{font-size:2em;margin-bottom:8px}
+.feat h3{font-size:1.05em;margin-bottom:4px;font-weight:700}
+.feat p{font-size:.9em;color:var(--dim)}
+.section{margin-top:80px}
+.section-title{text-align:center;font-size:1.8em;font-weight:700;margin-bottom:8px}
+.section-sub{text-align:center;color:var(--dim);margin-bottom:32px}
+.screenshots{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.shot{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px;text-align:center}
+.shot img{max-width:100%;border-radius:6px}
+.shot .label{font-size:.8em;color:var(--dim);margin-top:6px}
+.helper-card{background:linear-gradient(135deg,rgba(94,143,255,.08),rgba(168,85,247,.08));border:1px solid rgba(94,143,255,.25);border-radius:16px;padding:40px 36px;margin-top:32px;text-align:center}
+.helper-card h3{font-size:1.3em;font-weight:700;margin-bottom:8px}
+.helper-card p{color:var(--dim);font-size:.95em;max-width:480px;margin:0 auto 20px}
+.helper-btn{display:inline-block;padding:12px 32px;background:#238636;color:#fff;text-decoration:none;border-radius:10px;font-weight:600;border:1px solid rgba(240,246,252,.1);transition:background .2s}
+.helper-btn:hover{background:#2ea043}
+footer{margin-top:80px;padding:24px 0;border-top:1px solid var(--border);text-align:center;color:var(--dim);font-size:.85em}
+footer a{color:var(--blue);text-decoration:none}
+@media(max-width:600px){.hero h1{font-size:2.2em}.features{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>FlowPaste</h1>
+<p class="tagline">轻量 macOS 剪贴板管理器，让你的复制粘贴更高效</p>
+<div class="badges">
+<span class="badge b-free">30 天免费试用</span>
+<span class="badge b-mas">Mac App Store</span>
+<span class="badge b-lite">仅 2.5 MB</span>
+</div>
+<br>
+<a class="app-store-btn" href="https://apps.apple.com/app/flowpaste/id6814847348">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.29-1.32-3.14-2.53C4.14 17 2.94 12.45 4.94 9.7c.97-1.34 2.66-2.14 4.32-2.14 1.61 0 2.61.79 3.94.79 1.29 0 2.09-.82 3.96-.82.71 0 2.42.06 3.66 1.66-3.06 1.68-2.63 5.53-.11 7.31z"/></svg>
+App Store 下载
+</a>
+</div>
+
+<div class="container">
+<div class="section">
+<div class="section-title">核心功能</div>
+<p class="section-sub">剪贴板历史 · 搜索 · 预览 · 贴图 · 自动粘贴</p>
+<div class="features">
+<div class="feat"><div class="icon">📋</div><h3>历史记录</h3><p>自动保存所有复制过的文本、图片和文件，最多 500 条，支持智能去重</p></div>
+<div class="feat"><div class="icon">🔍</div><h3>快速搜索</h3><p>输入关键词秒级检索历史内容，↑↓ 键导航，数字键一键粘贴</p></div>
+<div class="feat"><div class="icon">⚡️</div><h3>快捷键调出</h3><p>⌘⇧V 随时呼出面板，面板跟随鼠标位置，不打断工作流</p></div>
+<div class="feat"><div class="icon">👁</div><h3>悬停预览</h3><p>鼠标悬停即可查看完整内容，支持文本、图片、PDF、Office 文档</p></div>
+<div class="feat"><div class="icon">📌</div><h3>贴图功能</h3><p>将图片或文本以浮动窗口贴在屏幕上，方便对照参考</p></div>
+<div class="feat"><div class="icon">🌍</div><h3>多语言</h3><p>内置 36 种语言，跟随系统语言自动切换</p></div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">自动粘贴</div>
+<p class="section-sub">选中条目后自动粘贴到光标位置（需安装 Helper）</p>
+<div class="helper-card">
+<h3>⚡️ FlowPaste Helper</h3>
+<p>由于 Mac App Store 安全限制，自动粘贴需要一个独立的免费 Helper 应用。<br>
+安装后选中历史条目即自动粘贴到之前光标所在位置，无需手动按 ⌘V。</p>
+<a class="helper-btn" href="helper.html">查看安装教程 & 下载 →</a>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">30 天免费试用</div>
+<p class="section-sub">试用期内所有功能可用 · 一次性买断 ¥28 · 永久使用</p>
+</div>
+</div>
+
+<footer>
+<p>FlowPaste · <a href="helper.html">Helper 下载</a> · <a href="https://github.com/newment/flowpaste-helper">GitHub</a></p>
+</footer>
+</body>
+</html>

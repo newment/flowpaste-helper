@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPaste Helper — 安装教程</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-dim: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --orange: #d29922;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 40px 20px; }
+        .hero { text-align: center; padding: 60px 0 40px; }
+        .hero h1 { font-size: 2.4em; font-weight: 700; margin-bottom: 8px; }
+        .hero p { color: var(--text-dim); font-size: 1.1em; }
+        .badge {
+            display: inline-block; padding: 2px 10px; border-radius: 12px;
+            font-size: 0.8em; font-weight: 600; margin: 12px 4px;
+        }
+        .badge-free { background: #1a3a2a; color: var(--green); }
+        .badge-oss { background: #1a2a4a; color: var(--accent); }
+        .download-btn {
+            display: inline-block; margin-top: 24px; padding: 14px 48px;
+            background: #238636; color: #fff; text-decoration: none;
+            border-radius: 8px; font-size: 1.15em; font-weight: 600;
+            border: 1px solid rgba(240,246,252,0.1);
+            transition: background .2s;
+        }
+        .download-btn:hover { background: #2ea043; }
+        .version { color: var(--text-dim); font-size: 0.85em; margin-top: 12px; }
+        .section { margin-top: 48px; }
+        .section h2 { font-size: 1.4em; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .step {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;
+        }
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--accent); color: var(--bg);
+            font-weight: 700; font-size: 0.85em; margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .step-title { font-weight: 600; display: flex; align-items: center; margin-bottom: 6px; }
+        .step-body { color: var(--text-dim); padding-left: 38px; font-size: 0.95em; }
+        .step-body kbd {
+            background: var(--border); padding: 1px 6px; border-radius: 4px;
+            font-family: inherit; font-size: 0.9em;
+        }
+        .warn {
+            background: #2d2200; border: 1px solid var(--orange); border-radius: 10px;
+            padding: 14px 18px; margin-top: 20px; font-size: 0.9em;
+        }
+        .warn strong { color: var(--orange); }
+        .faq-item { margin-bottom: 16px; }
+        .faq-q { font-weight: 600; margin-bottom: 4px; }
+        .faq-a { color: var(--text-dim); font-size: 0.95em; }
+        footer {
+            margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border);
+            text-align: center; color: var(--text-dim); font-size: 0.85em;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+            .step-body { padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center;padding:12px"><a href="index.html" style="color:#58a6ff;text-decoration:none">← 返回 FlowPaste 官网</a></div>
+<div class="container">
+        <div class="hero">
+            <h1>📋 FlowPaste Helper</h1>
+            <p>FlowPaste 剪贴板管理器的自动粘贴助手</p>
+            <span class="badge badge-free">免费</span>
+            <span class="badge badge-oss">macOS 14+</span>
+            <br>
+            <a class="download-btn" href="download/FlowPaste-Helper-1.0.0.zip" download>
+                ⬇ 下载 FlowPaste Helper
+            </a>
+            <p class="version">v1.0.0 · 32 KB · macOS 14.0+</p>
+        </div>
+
+        <div class="section">
+            <h2>🚀 安装教程</h2>
+
+            <div class="step">
+                <div class="step-title"><span class="step-num">1</span>下载并解压</div>
+                <div class="step-body">
+                    点击上方下载按钮，获得 <code>FlowPaste-Helper-1.0.0.zip</code>。<br>
+                    解压后将 <strong>FlowPaste Helper.app</strong> 拖入 <strong>应用程序</strong> 文件夹。
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title"><span class="step-num">2</span>打开 Helper</div>
+                <div class="step-body">
+                    双击打开 FlowPaste Helper。首次打开可能提示"无法验证开发者"，请前往
+                    <strong>系统设置 → 隐私与安全性</strong>，点击<strong>仍要打开</strong>。
+                    <br>Helper 启动后会自动设置开机自启，无需手动配置。
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title"><span class="step-num">3</span>授予辅助功能权限</div>
+                <div class="step-body">
+                    首次启动会弹出系统引导窗，点击<strong>「打开系统设置」</strong>。<br>
+                    在 <strong>隐私与安全性 → 辅助功能</strong> 列表中找到 <strong>FlowPaste Helper</strong>，
+                    打开开关并<strong>输入密码确认</strong>。
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title"><span class="step-num">4</span>在 FlowPaste 中启用</div>
+                <div class="step-body">
+                    打开 FlowPaste 设置（<kbd>⌘</kbd><kbd>⇧</kbd><kbd>V</kbd> 呼出面板后按 <kbd>⌘</kbd><kbd>,</kbd>），<br>
+                    在<strong>「自动粘贴」</strong>区块打开<strong>「启用自动粘贴」</strong>开关。
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title"><span class="step-num">✅</span>完成</div>
+                <div class="step-body">
+                    现在复制任意内容后按 <kbd>⌘</kbd><kbd>⇧</kbd><kbd>V</kbd> 呼出 FlowPaste 面板，
+                    选中条目按 <kbd>↩</kbd>（或数字键），内容会<strong>自动粘贴</strong>到你之前光标所在位置。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>❓ 常见问题</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">FlowPaste Helper 是什么？</div>
+                <div class="faq-a">
+                    一个独立的 macOS 后台代理，替 FlowPaste 执行「按下 ⌘V」的动作。
+                    因为 Mac App Store 的安全限制，FlowPaste 主应用无法直接模拟按键，
+                    所以自动粘贴功能由这个独立的 Helper 完成。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">安全吗？</div>
+                <div class="faq-a">
+                    Helper 代码开源，仅做一件事：收到 FlowPaste 信号后向当前应用发送 ⌘V。
+                    不读取屏幕内容、不监控键盘输入、不上传任何数据。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">开关已打开但不生效？</div>
+                <div class="faq-a">
+                    确保 FlowPaste Helper 正在运行（活动监视器搜索 "FlowPaste Helper"），
+                    且 FlowPaste 设置中「启用自动粘贴」开关已打开。
+                    如果辅助功能开关显示已开但 Helper 未生效，尝试删除条目后重新添加。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">如何卸载？</div>
+                <div class="faq-a">
+                    在 FlowPaste 设置中关闭「启用自动粘贴」，然后删除应用程序中的 FlowPaste Helper 即可。
+                    会在登录项中自动移除。
+                </div>
+            </div>
+        </div>
+
+        <div class="warn">
+            <strong>⚠️ 注意：</strong>FlowPaste Helper 不通过 Mac App Store 分发。
+            它需要 macOS「辅助功能」权限来模拟 ⌘V 按键，这超出了 App Store 沙盒应用的能力范围。
+            这是 Alfred、Raycast 等知名 Mac 工具的通行做法。
+        </div>
+
+        <footer>
+            <p><a href="index.html">← 返回 FlowPaste 官网</a> · <a href="https://github.com/newment/flowpaste-helper">GitHub</a> · MIT License</p>
+        </footer>
+    </div>
+</body>
+</html>
